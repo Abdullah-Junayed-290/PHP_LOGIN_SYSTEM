@@ -15,14 +15,12 @@
     </style>
 </head>
 <body>
-  <form action="login.php" method="post" accept-charset="utf-8">
-    Username: <input type="text" name="username" id="username" placeholder="Enter your username here ..." required="true" />
-    <br />
-    Password: <input type="password" name="password" id="password" placeholder="Enter your password here..." required="true" />
-    <br />
-    <button type="submit">Login</button>
-  </form>
-  <p>If you are in new in this website, please 🙏 register fist to create and account. 😊</p>
-  <a href="register_form.html">register</a>
+<h2>Login</h2>
+<form action="login.php" method="post">
+  Username: <input type="text" name="username" required><br><br>
+  Password: <input type="password" name="password" required><br><br>
+  <input type="checkbox" name="remember"> Remember Me<br><br>
+  <input type="submit" value="Login">
+</form>
 </body>
 </html>

@@ -1,14 +1,11 @@
-<?php 
-  session_start();
-  
-  if (!isset($_SESSION["user"])) {
-    echo "⚠️ Access denied! <a href='login.html'>Login</a>";
-    exit;
-  }
-  
-  echo "👋 Welcome ". $_SESSION["user"];
-  if ($_SESSION["user"] == "Admin") {
-    echo "<br /><a href='show_users.php'>Manage Users</a>";
-  }
-  echo "<br /><a href='logout.php'>logout</a>";
+<?php
+session_start();
+if (!isset($_SESSION['user']) && !isset($_COOKIE['user'])) {
+  echo "⚠️ Access denied! <a href='login.html'>Login</a>";
+  exit;
+}
+$user = $_SESSION['user'] ?? $_COOKIE['user'];
+echo "👋 Welcome, $user<br>";
+echo "<a href='change_password.php'>Change Password</a><br>";
+echo "<a href='logout.php'>Logout</a>";
 ?>
