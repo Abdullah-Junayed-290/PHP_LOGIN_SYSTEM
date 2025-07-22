@@ -104,6 +104,6 @@ CREATE TABLE users_login (
 
 ## 🙌 Author
 
-Created by **Md. Abdullah Junayed** with the guidance of ChatGPT.
+Created by **Md. Abdullah Junayed**.
 
 Happy coding! 🚀
